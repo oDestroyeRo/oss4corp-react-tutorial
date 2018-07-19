@@ -1,7 +1,7 @@
-#Basic Javascript, ES6
+# Basic Javascript, ES6
 ***
 ES6 ย่อมาจาก ECMAScript 6 เป็นมาตรฐานของภาษา JavaScript เริ่มใช้งานเมื่อปี 2015
-##Const and Let
+## Const and Let
 
 การประกาศตัวแปรใน Javascript
 
@@ -50,7 +50,7 @@ getTodayClass();
 ```
 
 ***
-##Rest and Spread Operator
+## Rest and Spread Operator
 Rest Parameter เป็นวิธีเขียนฟังก์ชันโดยรวม parameter ให้เป็น Array ก้อนเดียว
 
 ```javascript
@@ -111,7 +111,7 @@ console.log(validateShoppingList('oranges', 'bread', 'eggs'));
 ```
 
 ***
-##Default Parameters
+## Default Parameters
 การเรียก javascript function นั้นไม่จำเป็นต้องส่ง parameter ให้ครบทุกตัวก็สามารถทำงานได้ แต่โค้ดใน function นั้นๆ ต้องมีการตรวจเช็คค่าก่อนทุกครั้งเพื่อป้องกัน error
 
 การเขียน function แบบเดิม
@@ -138,7 +138,7 @@ function calculateSquareInches(width, length, thickness = 1){
 จะเห็นได้ว่าโค้ดรูปแบบใหม่จะมีจำนวนบรรทัดที่น้อยกว่า แต่ยังให้ผลลัพธ์เหมือนเดิม
 
 ***
-##Template Literals
+## Template Literals
 การจัด format ของ string ใน Javascript นั้นสามารถทำได้ด้วยคำสั่ง `+` เช่น
 
 ```javascript
@@ -160,7 +160,7 @@ console.log(`Hi today course is ${name}, host by ${hostby}`);
 โดยการเขียนโด้ดแบบใหม่ยังสามารถรองรับคำสั่งต่างๆภายใน Template Literals ได้อีกด้วยเช่น
 
 ***
-##Object Literals
+## Object Literals
 Object literal syntax เป็นวิธีการเขียนโค้ดแบบใหม่ให้ดูเรียบร้อยขึ้น สำหรับความแตกต่างของ javasript แบบเก่า กับ ES6 สามารถดูตัวอย่างได้ดังนี้
 
 การสร้างตัวแปรแบบ Object แบบเดิม
@@ -263,7 +263,7 @@ const Car = {
 ```
 
 ***
-##Destructuring
+## Destructuring
 การเขียนโด้ดแบบ ES6 นั้นทำให้การเขียนโด้ด javascript เปลี่ยนไปและทำให้โค้ดดูสะอาดและลดจำนวนบรรทัดได้ ตัวอย่างเช่น
 
 การดึงค่าจาก object
@@ -333,7 +333,8 @@ const [{ name }] = people
 //name = 'Bob'
 ```
 
-###map function
+### map function
+
 `map` เป็นคำสั่งใหม่​(method ของ Array)ที่สามารถใช้แทนการเขียน forloop แบบเดิม ตัวอย่างต่อไปจะแสดงถึงการใช้ `map`
 
 เมื่อเรามีตัวแปรเป็น Array 2 มิติดังนี้
@@ -391,7 +392,7 @@ let new_points = points.map(([ x, y ]) => {
 
 
 ***
-##Arrow Functions
+## Arrow Functions
 Arrow functions เป็น syntax ในการเขียน function แบบใหม่เพื่อให้โด้ดดูสะอาดขึ้น 
 
 ตัวอย่างการเขียน function แบบปกติ
@@ -459,9 +460,9 @@ const result = numbers.map(number => 2 * number);
 ```
 
 ***
-#Promise
+# Promise
 
 
 
-###Reference
+### Reference
 - Part of this document is translate from [https://coursework.vschool.io/es6-basics/ link] (https://coursework.vschool.io/es6-basics/)
