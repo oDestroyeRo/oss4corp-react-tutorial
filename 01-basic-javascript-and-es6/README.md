@@ -460,7 +460,9 @@ const result = numbers.map(number => 2 * number);
 ```
 
 ***
-# Promise
+## Promise
+
+## fetch
 
 
 
