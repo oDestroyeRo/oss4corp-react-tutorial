@@ -574,12 +574,5 @@ class EssayForm extends React.Component {
 
 
 
-## Lifting State Up
-
-## Composition vs Inheritance
-
-## Thinking In React
-
-
 ### Reference
 [https://reactjs.org/docs/ link](https://reactjs.org/docs/hello-world.html)
