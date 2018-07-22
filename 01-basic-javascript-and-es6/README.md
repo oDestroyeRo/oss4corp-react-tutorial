@@ -460,11 +460,126 @@ const result = numbers.map(number => 2 * number);
 ```
 
 ***
-## Promise
 
 ## fetch
 
+Available resources
 
+```
+Posts https://jsonplaceholder.typicode.com/posts/1
+Comments https://jsonplaceholder.typicode.com/comments/1
+Albums https://jsonplaceholder.typicode.com/albums/1
+Photos https://jsonplaceholder.typicode.com/photos/1
+Users https://jsonplaceholder.typicode.com/users/1
+Todos https://jsonplaceholder.typicode.com/todos/1
+```
+
+### Showing a resource
+```javascript
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+  .then(response => response.json())
+  .then(json => console.log(json))
+```
+
+### Listing resources
+```javascript
+fetch('https://jsonplaceholder.typicode.com/posts')
+  .then(response => response.json())
+  .then(json => console.log(json))
+```
+
+### Creating a resource
+```javascript
+// POST adds a random id to the object sent
+fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    body: JSON.stringify({
+      title: 'foo',
+      body: 'bar',
+      userId: 1
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+    }
+  })
+  .then(response => response.json())
+  .then(json => console.log(json))
+
+/* will return
+{
+  id: 101,
+  title: 'foo',
+  body: 'bar',
+  userId: 1
+}
+*/
+```
+
+### Updating a resource
+```javascript
+fetch('https://jsonplaceholder.typicode.com/posts/1', {
+    method: 'PUT',
+    body: JSON.stringify({
+      id: 1,
+      title: 'foo',
+      body: 'bar',
+      userId: 1
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+    }
+  })
+  .then(response => response.json())
+  .then(json => console.log(json))
+
+/* will return
+{
+  id: 1,
+  title: 'foo',
+  body: 'bar',
+  userId: 1
+}
+*/
+```
+
+```javascript
+fetch('https://jsonplaceholder.typicode.com/posts/1', {
+    method: 'PATCH',
+    body: JSON.stringify({
+      title: 'foo'
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+    }
+  })
+  .then(response => response.json())
+  .then(json => console.log(json))
+
+/* will return
+{
+  id: 1,
+  title: 'foo',
+  body: 'quia et suscipit [...]',
+  userId: 1
+}
+*/
+```
+
+### Deleting a resource
+```javascript
+fetch('https://jsonplaceholder.typicode.com/posts/1', {
+  method: 'DELETE'
+})
+```
+
+### Nested resources
+```javascript
+// equivalent to /comments?postId=1
+fetch('https://jsonplaceholder.typicode.com/posts/1/comments')
+  .then(response => response.json())
+  .then(json => console.log(json))
+```
 
 ### Reference
-- Part of this document is translate from [https://coursework.vschool.io/es6-basics/ link] (https://coursework.vschool.io/es6-basics/)
+- Part of this document is translate from [https://coursework.vschool.io/es6-basics/] (https://coursework.vschool.io/es6-basics/)
+- [https://github.com/typicode/jsonplaceholder#how-to](https://github.com/typicode/jsonplaceholder#how-to)
